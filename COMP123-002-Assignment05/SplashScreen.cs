@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace COMP123_002_Assignment05
 {
-    public partial class Form1 : Form
+    public partial class SplashScreen : Form
     {
-        public Form1()
+        public SplashScreen()
         {
             InitializeComponent();
+        }
+
+        private void SplashScreenTimer_Tick(object sender, EventArgs e)
+        {
+            SplashScreenTimer.Enabled = false;
+            Program.Forms[FormName.START_FORM].Show();
+            this.Hide();
         }
     }
 }
